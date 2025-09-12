@@ -11,7 +11,7 @@
       },
       { "label": "schon.dev", "url": "https://schon.dev/" }
     ],
-    "intro": "Ik ben Ian, een enthousiaste developer met een passie voor DevOps-gerelateerde onderwerpen. Onderwerpen zoals Terraform en het inrichten van CI/CD of een OTAP-straat doe ik met veel plezier. Daarnaast programmeer ik graag. Ik heb ervaring met meerdere talen en kan mijzelf snel kundig maken met een nieuwe programmeertaal."
+    "intro": "Ik ben Ian, een gedreven developer met een sterke focus op DevOps. Sinds mijn start in 2016 in webontwikkeling heb ik een passie ontwikkeld voor het inrichten van infrastructuur met Terraform en het stroomlijnen van CI/CD of een OTAP-straat. Dankzij mijn eerdere ervaringen als stagiair en werkstudent heb ik een stevige basis opgebouwd met GCP, Python en diverse andere talen en frameworks. Deze combinatie van vaardigheden maakt mij een veelzijdige en leergierige professional."
   },
   "skills": [
     "Terraform",
@@ -19,18 +19,17 @@
     "GitHub CI/CD",
     "Google Cloud Platform (GCP)",
     "Python",
-    "Scrum"
+    "Scrum",
+    "Web-developent",
+    "Debian based OS"
+
   ],
   "languages": ["Nederlands", "Engels"],
   "certifications": [
-    {
-      "label": "Cloud Skills Boost profiel",
-      "url": "https://www.cloudskillsboost.google/public_profiles/5de5b09a-e6a9-46e6-a1c5-148ae2048937"
-    },
+    { "label": "Bedrijfshulpverlener (2020-heden)" },
+    { "label": "Uitgebreide EHBO (2022-heden)" },
     { "label": "Oracle Java Fundamentals" },
-    { "label": "Oracle Database Design and Programming with SQL" },
-    { "label": "Bedrijfshulpverlener (BHV)" },
-    { "label": "Uitgebreide EHBO" }
+    { "label": "Oracle Database Design and Programming with SQL" }
   ],
   "experience": [
     {
@@ -48,7 +47,20 @@
           "title": "Stagiair",
           "period": "november 2022 – april 2023",
           "bullets": [
-            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), SonarCloud, Python"
+            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python, SonarCloud"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Studievereniging SIM",
+      "period": "april 2021 – heden",
+      "roles": [
+        {
+          "title": "Backend Developer",
+          "period": "april 2021 – heden",
+          "bullets": [
+            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python"
           ]
         }
       ]
@@ -58,7 +70,7 @@
       "period": "mei 2024 – juli 2024",
       "roles": [
         {
-          "title": "Developer / DevOps Engineer",
+          "title": "Developer / DevOps Engineer | Gedetacheerd vanuit Florbs",
           "period": "mei 2024 – juli 2024",
           "bullets": [
             "Skills: Terraform, GitLab CI/CD, Google Cloud Platform (GCP), Python"
@@ -67,35 +79,29 @@
       ]
     },
     {
-      "company": "Studievereniging SIM",
-      "period": "april 2021 – januari 2024",
+      "company":"De Haagse Hogeschool",
+      "period": "November 2019 - juli 2020 & februari 2022 - Oktober 2022",
       "roles": [
         {
-          "title": "Backend Developer",
-          "period": "april 2021 – januari 2024",
-          "bullets": [
-            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python"
-          ]
+          "title": "Student Assistent",
+          "period": "februari 2022 - Oktober 2022",
+          "bullets": ["Skills: Scrum, Kennis overdragen, Beheer lasersnijder en 3d printer"]
+        },
+        {
+          "title": "Student Assistent",
+          "period": "November 2019 - juli 2020",
+          "bullets": ["Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"]
         }
       ]
     },
     {
-      "company": "De Haagse Hogeschool",
-      "period": "november 2019 – januari 2024",
+      "company": "Stichting Haag Uit",
+      "period": "augustus 2019 – maart 2021",
       "roles": [
         {
-          "title": "Student Assistent HBO-ICT",
-          "period": "april 2021 – januari 2024",
-          "bullets": [
-            "Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"
-          ]
-        },
-        {
-          "title": "Student Assistent",
-          "period": "november 2019 – juli 2020",
-          "bullets": [
-            "Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"
-          ]
+          "title": "Web Developer",
+          "period": "augustus 2019 – maart 2021",
+          "bullets": ["Skills: JavaScript, Vue.js, PHP"]
         }
       ]
     },
@@ -112,17 +118,6 @@
           "title": "Werkstudent DevOps",
           "period": "maart 2020 – augustus 2020",
           "bullets": ["Skills: Support, Ansible, Let’s Encrypt"]
-        }
-      ]
-    },
-    {
-      "company": "Stichting Haag Uit",
-      "period": "augustus 2019 – maart 2021",
-      "roles": [
-        {
-          "title": "Web Developer",
-          "period": "augustus 2019 – maart 2021",
-          "bullets": ["Skills: JavaScript, Vue.js, PHP"]
         }
       ]
     },
@@ -164,7 +159,8 @@
       "period": "2018 – 2023",
       "bullets": [
         "Minoren: Fotografie in Beeld (2021/2022), Blockchain Minor (2021)",
-        "Extra activiteiten: Bestuur Studievereniging SIM, Student Assistent, Student Ambassadeur"
+        "Extra activiteiten: Bestuur Studievereniging SIM, Student Assistent, Student Ambassadeur",
+        "Samenwerkingstrajecten / Projecten: FIU & KPN consulting, GymLadder, HHS - Innovative Developement"
       ]
     },
     {
@@ -173,6 +169,75 @@
       "bullets": [
         "Extra activiteiten: Ambassadeur, Assistent Techniek Innovatie Huis",
         "Project: Intern platform ontwikkeld voor projectmanagement"
+      ]
+    }
+  ],
+  "volunteers": [
+    {
+      "company": "A.L.S.K.V. Levitas",
+      "period": "November 2023 – oktober 2024",
+      "roles": [
+        {
+          "title": "Bestuur - Assessor & Quaestor",
+          "period": "November 2023 – oktober 2024",
+          "bullets": [
+            "Assessor: ondersteunen van mijn bestuursgenoten",
+            "Quaestor: Opgenomen na uitval bestuurslid, Beheer van de financiën van de vereniging"
+          ]
+        },
+        {
+          "title": "Commissies",
+          "period": "November 2022 – heden",
+          "bullets": [
+            "Webcie (2022-heden): Beheer van de website en google workspace van de vereniging",
+            "Maaac (2022-2024): Onderhoud van materieel en pand van de vereniging"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Studievereniging SIM",
+      "period": "December 2019 – heden",
+      "roles": [
+        {
+          "title": "Bestuur - Penningmeester",
+          "period": "November 2021 – oktober 2022",
+          "bullets": [
+            "Beheer van de financiën van de vereniging"
+          ]
+        },
+        {
+          "title": "Commissies",
+          "period": "December 2019 – heden",
+          "bullets": [
+            "Systeemcommissie / Webcie (2021-heden): Ontwikkelen en beheren van de website van de vereniging",
+            "Kascommissie (2020-2021): Controleren van de financiën van de vereniging",
+            "Commissie Zoetermeer (2020-2021): organiseren van (onderwijsgerelateerde) evenementen en workshops",
+            "Onderwijs commissie Zoetermeer (2019-2020): organiseren van onderwijs gerelaterde evenementen en workshops"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Stichting Haag Uit",
+      "period": "Maart 2019 – November 2022",
+      "roles": [
+        {
+          "title": "Web Developer",
+          "period": "augustus 2019 - november 2021",
+          "bullets": [
+            "Bijdragen aan de website en interne applicaties van de stichting"
+          ]
+        },
+        {
+          "title": "Algemeen Medewerker",
+          "period": "2019- 2022",
+          "bullets": [
+            "Logistiek & ondersteunend technisch medewerker (2022): Transport voor boodschappen en medische zaken en onderstuenen van de Technisch medewerker",
+            "Moderator (2020-2021): tijdens de corona periode de discord omgeving ingericht en beheerd voor een online introductie",
+            "Technich medewerker (2019): onderstuenen van het kamp op gebied van water, elektra en dergelijken"
+          ]
+        }
       ]
     }
   ]

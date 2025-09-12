@@ -64,6 +64,11 @@
                     <h2>Opleidingen</h2>
                     <div id="education"></div>
                 </section>
+
+                <section>
+                    <h2>Vrijwilligerswerk</h2>
+                    <div id="volunteers"></div>
+                </section>
             </section>
         </div>
     </main>
@@ -72,64 +77,6 @@
         <p class="muted">Tip: klik op “Bewaar als PDF” of gebruik Ctrl/Cmd+P.</p>
     </footer>
 
-    <script id="cv-data" type="application/json">
-    {
-      "profile": {
-        "name": "Ian Schön",
-        "location": "Den Haag, Zuid-Holland, Nederland",
-        "email": "contact@schon.dev",
-        "photo": "https://schon.pictures/images/about-768w.webp",
-        "links": [
-          {"label": "linkedin.com/in/ischon", "url": "https://www.linkedin.com/in/ischon/"},
-          {"label": "schon.dev", "url": "https://schon.dev/"}
-        ],
-        "intro": "Ik ben Ian, een enthousiaste developer met een passie voor DevOps-gerelateerde onderwerpen. Onderwerpen zoals Terraform en het inrichten van CI/CD of een OTAP-straat doe ik met veel plezier. Daarnaast programmeer ik graag. Ik heb ervaring met meerdere talen en kan mijzelf snel kundig maken met een nieuwe programmeertaal."
-      },
-      "skills": ["Terraform","GitLab CI/CD","GitHub CI/CD","Google Cloud Platform (GCP)","Python","Scrum"],
-      "languages": ["Nederlands","Engels"],
-      "certifications": [
-        {"label":"Cloud Skills Boost profiel","url":"https://www.cloudskillsboost.google/public_profiles/5de5b09a-e6a9-46e6-a1c5-148ae2048937"},
-        {"label":"Oracle Java Fundamentals"},
-        {"label":"Oracle Database Design and Programming with SQL"},
-        {"label":"Bedrijfshulpverlener (BHV)"},
-        {"label":"Uitgebreide EHBO"}
-      ],
-      "experience": [
-        {"company":"Florbs","period":"april 2023 – heden","roles":[
-          {"title":"Developer & Security Officer","period":"april 2023 – heden","bullets":["Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python, SonarCloud, ISO 27001:2002"]},
-          {"title":"Stagiair","period":"november 2022 – april 2023","bullets":["Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), SonarCloud, Python"]}
-        ]},
-        {"company":"ConnectCardio","period":"mei 2024 – juli 2024","roles":[
-          {"title":"Developer / DevOps Engineer","period":"mei 2024 – juli 2024","bullets":["Skills: Terraform, GitLab CI/CD, Google Cloud Platform (GCP), Python"]}
-        ]},
-        {"company":"Studievereniging SIM","period":"april 2021 – januari 2024","roles":[
-          {"title":"Backend Developer","period":"april 2021 – januari 2024","bullets":["Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python"]}
-        ]},
-        {"company":"De Haagse Hogeschool","period":"november 2019 – januari 2024","roles":[
-          {"title":"Student Assistent HBO-ICT","period":"april 2021 – januari 2024","bullets":["Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"]},
-          {"title":"Student Assistent","period":"november 2019 – juli 2020","bullets":["Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"]}
-        ]},
-        {"company":"Redkiwi","period":"maart 2020 – januari 2021","roles":[
-          {"title":"Stagiair DevOps","period":"augustus 2020 – januari 2021","bullets":["Skills: Onderzoek, HashiCorp Vault, Ansible"]},
-          {"title":"Werkstudent DevOps","period":"maart 2020 – augustus 2020","bullets":["Skills: Support, Ansible, Let’s Encrypt"]}
-        ]},
-        {"company":"Stichting Haag Uit","period":"augustus 2019 – maart 2021","roles":[
-          {"title":"Web Developer","period":"augustus 2019 – maart 2021","bullets":["Skills: JavaScript, Vue.js, PHP"]}
-        ]},
-        {"company":"Agfa Healthcare","period":"januari 2017 – februari 2018","roles":[
-          {"title":"Stagiair Web Development","period":"augustus 2017 – februari 2018","bullets":["Skills: JavaScript, Vue.js, PHP, Symfony, GitLab CI/CD"]},
-          {"title":"Stagiair Web Development","period":"januari 2017 – juni 2017","bullets":["Skills: JavaScript, Vue.js, AngularJS, PHP, Symfony, Bash"]}
-        ]},
-        {"company":"XinsHosting","period":"september 2016 – november 2019","roles":[
-          {"title":"Web Developer","period":"september 2016 – november 2019","bullets":["Skills: JavaScript, Vue.js, PHP, Symfony, Bash scripting, GitLab CI/CD, Python"]}
-        ]}
-      ],
-      "education": [
-        {"title":"HBO-ICT – Innovative Development – De Haagse Hogeschool","period":"2018 – 2023","bullets":["Minoren: Fotografie in Beeld (2021/2022), Blockchain Minor (2021)","Extra activiteiten: Bestuur Studievereniging SIM, Student Assistent, Student Ambassadeur"]},
-        {"title":"Applicatie en Media Ontwikkelaar (MBO Niveau 4) – ROC Mondriaan","period":"2015 – 2018","bullets":["Extra activiteiten: Ambassadeur, Assistent Techniek Innovatie Huis","Project: Intern platform ontwikkeld voor projectmanagement"]}
-      ]
-    }
-    </script>
     <script>
         const printBtn = document.getElementById('printBtn');
         if (printBtn) {
@@ -194,29 +141,40 @@
         }
 
         async function loadData() {
-            try {
-                const res = await fetch('cv.json', { cache: 'no-store' });
-                if (!res.ok) throw new Error('Failed');
-                return await res.json();
-            } catch (e) {
-                const inline = byId('cv-data');
-                return JSON.parse(inline.textContent);
-            }
+            const res = await fetch('cv.json', { cache: 'no-store' });
+            if (!res.ok) throw new Error('Failed to load cv.json');
+            return await res.json();
         }
 
-        loadData().then(data => {
-            byId('name').textContent = data.profile.name;
-            byId('location').textContent = data.profile.location;
-            byId('intro').textContent = data.profile.intro;
-            const photo = byId('photo'); if (data.profile.photo) photo.src = data.profile.photo;
-            const contactItems = [ { label: data.profile.email, url: 'mailto:' + data.profile.email }, ...(data.profile.links||[]) ];
-            renderList('contact', contactItems);
-            renderList('skills', data.skills||[]);
-            renderList('languages', data.languages||[]);
-            renderList('certifications', data.certifications||[]);
-            renderExperience('experience', data.experience||[]);
-            renderEducation('education', data.education||[]);
-        });
+        loadData()
+            .then(data => {
+                byId('name').textContent = data.profile.name;
+                byId('location').textContent = data.profile.location;
+                byId('intro').textContent = data.profile.intro;
+                const photo = byId('photo'); if (data.profile.photo) photo.src = data.profile.photo;
+                const contactItems = [ { label: data.profile.email, url: 'mailto:' + data.profile.email }, ...(data.profile.links||[]) ];
+                renderList('contact', contactItems);
+                renderList('skills', data.skills||[]);
+                renderList('languages', data.languages||[]);
+                renderList('certifications', data.certifications||[]);
+                renderExperience('experience', data.experience||[]);
+                renderEducation('education', data.education||[]);
+                renderExperience('volunteers', data.volunteers||[]);
+            })
+            .catch(err => {
+                const content = document.querySelector('.content');
+                const note = document.createElement('div');
+                note.className = 'entry';
+                note.innerHTML = '<p class="muted">Kon cv.json niet laden (meestal door file:// CORS). Start lokaal een server en herlaad:</p>'+
+                    '<pre style="white-space:pre-wrap;background:#f6f8fa;border:1px solid #e5e7eb;border-radius:6px;padding:8px">'+
+                    'Python:  python -m http.server 5173\n'+
+                    'Node:    npx serve -l 5173\n'+
+                    'Node:    npx http-server -p 5173 -c-1\n'+
+                    '</pre>'+
+                    '<p class="muted">Open vervolgens: http://localhost:5173</p>';
+                content.prepend(note);
+                console.error(err);
+            });
     </script>
 </body>
 </html>
