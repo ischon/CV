@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV – Ian Schön</title>
+    <meta name="description" content="CV van Ian Schön – profiel, ervaring, vaardigheden en contact.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header no-print">
+        <div class="container">
+            <div class="actions">
+                <a class="btn" href="https://www.linkedin.com/in/ischon/" target="_blank" rel="noopener">LinkedIn-profiel</a>
+                <button class="btn primary" id="printBtn" type="button">Bewaar als PDF</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container cv">
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="photo">
+                    <img id="photo" src="https://schon.pictures/images/about-768w.webp" alt="Profielfoto Ian Schön" width="512" height="512" loading="lazy">
+                </div>
+                <div class="cv-header">
+                    <h1 id="name">Ian Schön</h1>
+                    <p class="lead" id="location">Den Haag, Zuid-Holland, Nederland</p>
+                </div>
+                <section>
+                    <h2>Contact</h2>
+                    <ul class="meta" id="contact"></ul>
+                </section>
+                <section>
+                    <h2>Belangrijkste Vaardigheden</h2>
+                    <ul class="bullets compact" id="skills"></ul>
+                </section>
+                <section>
+                    <h2>Talen</h2>
+                    <ul class="bullets compact" id="languages"></ul>
+                </section>
+                <section>
+                    <h2>Certificeringen</h2>
+                    <ul class="bullets compact" id="certifications"></ul>
+                </section>
+            </aside>
+
+            <section class="content">
+                <section>
+                    <h2>Introductie</h2>
+                    <p id="intro"></p>
+                </section>
+
+                <section>
+                    <h2>Ervaring</h2>
+                    <div id="experience"></div>
+                </section>
+
+
+                <section>
+                    <h2>Opleidingen</h2>
+                    <div id="education"></div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer class="container no-print">
+        <p class="muted">Tip: klik op “Bewaar als PDF” of gebruik Ctrl/Cmd+P.</p>
+    </footer>
+
+    <script id="cv-data" type="application/json">
+    {
+      "profile": {
+        "name": "Ian Schön",
+        "location": "Den Haag, Zuid-Holland, Nederland",
+        "email": "contact@schon.dev",
+        "photo": "https://schon.pictures/images/about-768w.webp",
+        "links": [
+          {"label": "linkedin.com/in/ischon", "url": "https://www.linkedin.com/in/ischon/"},
+          {"label": "schon.dev", "url": "https://schon.dev/"}
+        ],
+        "intro": "Ik ben Ian, een enthousiaste developer met een passie voor DevOps-gerelateerde onderwerpen. Onderwerpen zoals Terraform en het inrichten van CI/CD of een OTAP-straat doe ik met veel plezier. Daarnaast programmeer ik graag. Ik heb ervaring met meerdere talen en kan mijzelf snel kundig maken met een nieuwe programmeertaal."
+      },
+      "skills": ["Terraform","GitLab CI/CD","GitHub CI/CD","Google Cloud Platform (GCP)","Python","Scrum"],
+      "languages": ["Nederlands","Engels"],
+      "certifications": [
+        {"label":"Cloud Skills Boost profiel","url":"https://www.cloudskillsboost.google/public_profiles/5de5b09a-e6a9-46e6-a1c5-148ae2048937"},
+        {"label":"Oracle Java Fundamentals"},
+        {"label":"Oracle Database Design and Programming with SQL"},
+        {"label":"Bedrijfshulpverlener (BHV)"},
+        {"label":"Uitgebreide EHBO"}
+      ],
+      "experience": [
+        {"company":"Florbs","period":"april 2023 – heden","roles":[
+          {"title":"Developer & Security Officer","period":"april 2023 – heden","bullets":["Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python, SonarCloud, ISO 27001:2002"]},
+          {"title":"Stagiair","period":"november 2022 – april 2023","bullets":["Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), SonarCloud, Python"]}
+        ]},
+        {"company":"ConnectCardio","period":"mei 2024 – juli 2024","roles":[
+          {"title":"Developer / DevOps Engineer","period":"mei 2024 – juli 2024","bullets":["Skills: Terraform, GitLab CI/CD, Google Cloud Platform (GCP), Python"]}
+        ]},
+        {"company":"Studievereniging SIM","period":"april 2021 – januari 2024","roles":[
+          {"title":"Backend Developer","period":"april 2021 – januari 2024","bullets":["Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python"]}
+        ]},
+        {"company":"De Haagse Hogeschool","period":"november 2019 – januari 2024","roles":[
+          {"title":"Student Assistent HBO-ICT","period":"april 2021 – januari 2024","bullets":["Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"]},
+          {"title":"Student Assistent","period":"november 2019 – juli 2020","bullets":["Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"]}
+        ]},
+        {"company":"Redkiwi","period":"maart 2020 – januari 2021","roles":[
+          {"title":"Stagiair DevOps","period":"augustus 2020 – januari 2021","bullets":["Skills: Onderzoek, HashiCorp Vault, Ansible"]},
+          {"title":"Werkstudent DevOps","period":"maart 2020 – augustus 2020","bullets":["Skills: Support, Ansible, Let’s Encrypt"]}
+        ]},
+        {"company":"Stichting Haag Uit","period":"augustus 2019 – maart 2021","roles":[
+          {"title":"Web Developer","period":"augustus 2019 – maart 2021","bullets":["Skills: JavaScript, Vue.js, PHP"]}
+        ]},
+        {"company":"Agfa Healthcare","period":"januari 2017 – februari 2018","roles":[
+          {"title":"Stagiair Web Development","period":"augustus 2017 – februari 2018","bullets":["Skills: JavaScript, Vue.js, PHP, Symfony, GitLab CI/CD"]},
+          {"title":"Stagiair Web Development","period":"januari 2017 – juni 2017","bullets":["Skills: JavaScript, Vue.js, AngularJS, PHP, Symfony, Bash"]}
+        ]},
+        {"company":"XinsHosting","period":"september 2016 – november 2019","roles":[
+          {"title":"Web Developer","period":"september 2016 – november 2019","bullets":["Skills: JavaScript, Vue.js, PHP, Symfony, Bash scripting, GitLab CI/CD, Python"]}
+        ]}
+      ],
+      "education": [
+        {"title":"HBO-ICT – Innovative Development – De Haagse Hogeschool","period":"2018 – 2023","bullets":["Minoren: Fotografie in Beeld (2021/2022), Blockchain Minor (2021)","Extra activiteiten: Bestuur Studievereniging SIM, Student Assistent, Student Ambassadeur"]},
+        {"title":"Applicatie en Media Ontwikkelaar (MBO Niveau 4) – ROC Mondriaan","period":"2015 – 2018","bullets":["Extra activiteiten: Ambassadeur, Assistent Techniek Innovatie Huis","Project: Intern platform ontwikkeld voor projectmanagement"]}
+      ]
+    }
+    </script>
+    <script>
+        const printBtn = document.getElementById('printBtn');
+        if (printBtn) {
+            printBtn.addEventListener('click', function handlePrintClick() {
+                window.print();
+            });
+        }
+
+        function byId(id) { return document.getElementById(id); }
+        function el(tag, attrs = {}, children = []) {
+            const n = document.createElement(tag);
+            for (const [k,v] of Object.entries(attrs)) {
+                if (k === 'class') n.className = v; else if (k === 'text') n.textContent = v; else n.setAttribute(k, v);
+            }
+            for (const c of children) n.appendChild(c);
+            return n;
+        }
+
+        function renderList(targetId, items) {
+            const ul = byId(targetId);
+            ul.innerHTML = '';
+            for (const item of items) {
+                if (typeof item === 'string') ul.appendChild(el('li', { text: item }));
+                else ul.appendChild(el('li', {}, [ el('a', { href: item.url, target: '_blank', rel: 'noopener', text: item.label }) ]));
+            }
+        }
+
+        function renderExperience(targetId, companies) {
+            const root = byId(targetId);
+            root.innerHTML = '';
+            for (const company of companies) {
+                const header = el('div', { class: 'company-header' }, [
+                    el('h3', { text: company.company }),
+                    el('span', { class: 'period', text: company.period || '' })
+                ]);
+                const rolesUl = el('ul', { class: 'roles' });
+                for (const role of company.roles || []) {
+                    const li = el('li', { class: 'role' });
+                    const title = el('span', { class: 'role-title', text: role.title });
+                    const period = el('span', { class: 'period', text: role.period || '' });
+                    const bulletsUl = el('ul');
+                    for (const b of role.bullets || []) bulletsUl.appendChild(el('li', { text: b }));
+                    li.appendChild(title); li.appendChild(period); li.appendChild(bulletsUl);
+                    rolesUl.appendChild(li);
+                }
+                const article = el('article', { class: 'company' }, [header, rolesUl]);
+                root.appendChild(article);
+            }
+        }
+
+        function renderEducation(targetId, items) {
+            const root = byId(targetId); root.innerHTML='';
+            for (const ed of items) {
+                const header = el('div', { class: 'entry-header' }, [
+                    el('h3', { text: ed.title }),
+                    el('span', { class: 'period', text: ed.period || '' })
+                ]);
+                const ul = el('ul');
+                for (const b of ed.bullets || []) ul.appendChild(el('li', { text: b }));
+                root.appendChild(el('article', { class: 'entry' }, [header, ul]));
+            }
+        }
+
+        async function loadData() {
+            try {
+                const res = await fetch('cv.json', { cache: 'no-store' });
+                if (!res.ok) throw new Error('Failed');
+                return await res.json();
+            } catch (e) {
+                const inline = byId('cv-data');
+                return JSON.parse(inline.textContent);
+            }
+        }
+
+        loadData().then(data => {
+            byId('name').textContent = data.profile.name;
+            byId('location').textContent = data.profile.location;
+            byId('intro').textContent = data.profile.intro;
+            const photo = byId('photo'); if (data.profile.photo) photo.src = data.profile.photo;
+            const contactItems = [ { label: data.profile.email, url: 'mailto:' + data.profile.email }, ...(data.profile.links||[]) ];
+            renderList('contact', contactItems);
+            renderList('skills', data.skills||[]);
+            renderList('languages', data.languages||[]);
+            renderList('certifications', data.certifications||[]);
+            renderExperience('experience', data.experience||[]);
+            renderEducation('education', data.education||[]);
+        });
+    </script>
+</body>
+</html>

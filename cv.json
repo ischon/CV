@@ -1,0 +1,179 @@
+{
+  "profile": {
+    "name": "Ian Schön",
+    "location": "Den Haag, Zuid-Holland, Nederland",
+    "email": "contact@schon.dev",
+    "photo": "https://schon.pictures/images/about-768w.webp",
+    "links": [
+      {
+        "label": "linkedin.com/in/ischon",
+        "url": "https://www.linkedin.com/in/ischon/"
+      },
+      { "label": "schon.dev", "url": "https://schon.dev/" }
+    ],
+    "intro": "Ik ben Ian, een enthousiaste developer met een passie voor DevOps-gerelateerde onderwerpen. Onderwerpen zoals Terraform en het inrichten van CI/CD of een OTAP-straat doe ik met veel plezier. Daarnaast programmeer ik graag. Ik heb ervaring met meerdere talen en kan mijzelf snel kundig maken met een nieuwe programmeertaal."
+  },
+  "skills": [
+    "Terraform",
+    "GitLab CI/CD",
+    "GitHub CI/CD",
+    "Google Cloud Platform (GCP)",
+    "Python",
+    "Scrum"
+  ],
+  "languages": ["Nederlands", "Engels"],
+  "certifications": [
+    {
+      "label": "Cloud Skills Boost profiel",
+      "url": "https://www.cloudskillsboost.google/public_profiles/5de5b09a-e6a9-46e6-a1c5-148ae2048937"
+    },
+    { "label": "Oracle Java Fundamentals" },
+    { "label": "Oracle Database Design and Programming with SQL" },
+    { "label": "Bedrijfshulpverlener (BHV)" },
+    { "label": "Uitgebreide EHBO" }
+  ],
+  "experience": [
+    {
+      "company": "Florbs",
+      "period": "november 2022 – heden",
+      "roles": [
+        {
+          "title": "Developer & Security Officer",
+          "period": "april 2023 – heden",
+          "bullets": [
+            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python, SonarCloud, ISO 27001:2002"
+          ]
+        },
+        {
+          "title": "Stagiair",
+          "period": "november 2022 – april 2023",
+          "bullets": [
+            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), SonarCloud, Python"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "ConnectCardio",
+      "period": "mei 2024 – juli 2024",
+      "roles": [
+        {
+          "title": "Developer / DevOps Engineer",
+          "period": "mei 2024 – juli 2024",
+          "bullets": [
+            "Skills: Terraform, GitLab CI/CD, Google Cloud Platform (GCP), Python"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Studievereniging SIM",
+      "period": "april 2021 – januari 2024",
+      "roles": [
+        {
+          "title": "Backend Developer",
+          "period": "april 2021 – januari 2024",
+          "bullets": [
+            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "De Haagse Hogeschool",
+      "period": "november 2019 – januari 2024",
+      "roles": [
+        {
+          "title": "Student Assistent HBO-ICT",
+          "period": "april 2021 – januari 2024",
+          "bullets": [
+            "Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"
+          ]
+        },
+        {
+          "title": "Student Assistent",
+          "period": "november 2019 – juli 2020",
+          "bullets": [
+            "Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Redkiwi",
+      "period": "maart 2020 – januari 2021",
+      "roles": [
+        {
+          "title": "Stagiair DevOps",
+          "period": "augustus 2020 – januari 2021",
+          "bullets": ["Skills: Onderzoek, HashiCorp Vault, Ansible"]
+        },
+        {
+          "title": "Werkstudent DevOps",
+          "period": "maart 2020 – augustus 2020",
+          "bullets": ["Skills: Support, Ansible, Let’s Encrypt"]
+        }
+      ]
+    },
+    {
+      "company": "Stichting Haag Uit",
+      "period": "augustus 2019 – maart 2021",
+      "roles": [
+        {
+          "title": "Web Developer",
+          "period": "augustus 2019 – maart 2021",
+          "bullets": ["Skills: JavaScript, Vue.js, PHP"]
+        }
+      ]
+    },
+    {
+      "company": "Agfa Healthcare",
+      "period": "januari 2017 – februari 2018",
+      "roles": [
+        {
+          "title": "Stagiair Web Development",
+          "period": "augustus 2017 – februari 2018",
+          "bullets": ["Skills: JavaScript, Vue.js, PHP, Symfony, GitLab CI/CD"]
+        },
+        {
+          "title": "Stagiair Web Development",
+          "period": "januari 2017 – juni 2017",
+          "bullets": [
+            "Skills: JavaScript, Vue.js, AngularJS, PHP, Symfony, Bash"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "XinsHosting",
+      "period": "september 2016 – november 2019",
+      "roles": [
+        {
+          "title": "Web Developer",
+          "period": "september 2016 – november 2019",
+          "bullets": [
+            "Skills: JavaScript, Vue.js, PHP, Symfony, Bash scripting, GitLab CI/CD, Python"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "HBO-ICT – Innovative Development – De Haagse Hogeschool",
+      "period": "2018 – 2023",
+      "bullets": [
+        "Minoren: Fotografie in Beeld (2021/2022), Blockchain Minor (2021)",
+        "Extra activiteiten: Bestuur Studievereniging SIM, Student Assistent, Student Ambassadeur"
+      ]
+    },
+    {
+      "title": "Applicatie en Media Ontwikkelaar (MBO Niveau 4) – ROC Mondriaan",
+      "period": "2015 – 2018",
+      "bullets": [
+        "Extra activiteiten: Ambassadeur, Assistent Techniek Innovatie Huis",
+        "Project: Intern platform ontwikkeld voor projectmanagement"
+      ]
+    }
+  ]
+}
