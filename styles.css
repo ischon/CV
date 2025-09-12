@@ -67,7 +67,7 @@ h3 { font-size: 16px; margin: 0; }
 .role ul { margin-top: 6px; }
 
 /* Typography refinements */
-p, li { hyphens: auto; }
+p, li { hyphens: manual; }
 ul { margin: 8px 0 0 8px; padding-inline-start: 25px}
 li { margin: 3px 0; }
 

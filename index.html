@@ -99,8 +99,9 @@
             const ul = byId(targetId);
             ul.innerHTML = '';
             for (const item of items) {
-                if (typeof item === 'string') ul.appendChild(el('li', { text: item }));
-                else ul.appendChild(el('li', {}, [ el('a', { href: item.url, target: '_blank', rel: 'noopener', text: item.label }) ]));
+                if (typeof item !== "string" && item.url !== undefined ) ul.appendChild(el('li', {}, [ el('a', { href: item.url, target: '_blank', rel: 'noopener', text: item.label }) ]));
+                else if (typeof item !== "string") ul.appendChild(el('li', { text: item.label }));
+                else ul.appendChild(el('li', { text: item }));
             }
         }
 
