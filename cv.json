@@ -22,7 +22,6 @@
     "Scrum",
     "Web-developent",
     "Debian based OS"
-
   ],
   "languages": ["Nederlands", "Engels"],
   "certifications": [
@@ -79,18 +78,22 @@
       ]
     },
     {
-      "company":"De Haagse Hogeschool",
+      "company": "De Haagse Hogeschool",
       "period": "November 2019 - juli 2020 & februari 2022 - Oktober 2022",
       "roles": [
         {
           "title": "Student Assistent",
           "period": "februari 2022 - Oktober 2022",
-          "bullets": ["Skills: Scrum, Kennis overdragen, Beheer lasersnijder en 3d printer"]
+          "bullets": [
+            "Skills: Scrum, Kennis overdragen, Beheer lasersnijder en 3d printer"
+          ]
         },
         {
           "title": "Student Assistent",
           "period": "November 2019 - juli 2020",
-          "bullets": ["Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"]
+          "bullets": [
+            "Skills: Scrum, Kennis overdragen, ondersteuning bij diverse programmeertalen en frameworks"
+          ]
         }
       ]
     },
@@ -202,9 +205,7 @@
         {
           "title": "Bestuur - Penningmeester",
           "period": "November 2021 – oktober 2022",
-          "bullets": [
-            "Beheer van de financiën van de vereniging"
-          ]
+          "bullets": ["Beheer van de financiën van de vereniging"]
         },
         {
           "title": "Commissies",

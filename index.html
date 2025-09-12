@@ -1,175 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CV – Ian Schön</title>
-    <meta name="description" content="CV van Ian Schön – profiel, ervaring, vaardigheden en contact.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="CV van Ian Schön – profiel, ervaring, vaardigheden en contact."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header class="site-header no-print">
-        <div class="container">
-            <div class="actions">
-                <a class="btn" href="https://www.linkedin.com/in/ischon/" target="_blank" rel="noopener">LinkedIn-profiel</a>
-                <button class="btn primary" id="printBtn" type="button">Bewaar als PDF</button>
-            </div>
+      <div class="container">
+        <div class="actions">
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/ischon/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn-profiel</a
+          >
+          <button class="btn primary" id="printBtn" type="button">
+            Bewaar als PDF
+          </button>
         </div>
+      </div>
     </header>
 
     <main class="container cv">
-        <div class="layout">
-            <aside class="sidebar">
-                <div class="photo">
-                    <img id="photo" src="https://schon.pictures/images/about-768w.webp" alt="Profielfoto Ian Schön" width="512" height="512" loading="lazy">
-                </div>
-                <div class="cv-header">
-                    <h1 id="name">Ian Schön</h1>
-                    <p class="lead" id="location">Den Haag, Zuid-Holland, Nederland</p>
-                </div>
-                <section>
-                    <h2>Contact</h2>
-                    <ul class="meta" id="contact"></ul>
-                </section>
-                <section>
-                    <h2>Belangrijkste Vaardigheden</h2>
-                    <ul class="bullets compact" id="skills"></ul>
-                </section>
-                <section>
-                    <h2>Talen</h2>
-                    <ul class="bullets compact" id="languages"></ul>
-                </section>
-                <section>
-                    <h2>Certificeringen</h2>
-                    <ul class="bullets compact" id="certifications"></ul>
-                </section>
-            </aside>
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="photo">
+            <img
+              id="photo"
+              src="https://schon.pictures/images/about-768w.webp"
+              alt="Profielfoto Ian Schön"
+              width="512"
+              height="512"
+              loading="lazy"
+            />
+          </div>
+          <div class="cv-header">
+            <h1 id="name">Ian Schön</h1>
+            <p class="lead" id="location">Den Haag, Zuid-Holland, Nederland</p>
+          </div>
+          <section>
+            <h2>Contact</h2>
+            <ul class="meta" id="contact"></ul>
+          </section>
+          <section>
+            <h2>Belangrijkste Vaardigheden</h2>
+            <ul class="bullets compact" id="skills"></ul>
+          </section>
+          <section>
+            <h2>Talen</h2>
+            <ul class="bullets compact" id="languages"></ul>
+          </section>
+          <section>
+            <h2>Certificeringen</h2>
+            <ul class="bullets compact" id="certifications"></ul>
+          </section>
+        </aside>
 
-            <section class="content">
-                <section>
-                    <h2>Introductie</h2>
-                    <p id="intro"></p>
-                </section>
+        <section class="content">
+          <section>
+            <h2>Introductie</h2>
+            <p id="intro"></p>
+          </section>
 
-                <section>
-                    <h2>Ervaring</h2>
-                    <div id="experience"></div>
-                </section>
+          <section>
+            <h2>Ervaring</h2>
+            <div id="experience"></div>
+          </section>
 
+          <section>
+            <h2>Opleidingen</h2>
+            <div id="education"></div>
+          </section>
 
-                <section>
-                    <h2>Opleidingen</h2>
-                    <div id="education"></div>
-                </section>
-
-                <section>
-                    <h2>Vrijwilligerswerk</h2>
-                    <div id="volunteers"></div>
-                </section>
-            </section>
-        </div>
+          <section>
+            <h2>Vrijwilligerswerk</h2>
+            <div id="volunteers"></div>
+          </section>
+        </section>
+      </div>
     </main>
 
     <footer class="container no-print">
-        <p class="muted">Tip: klik op “Bewaar als PDF” of gebruik Ctrl/Cmd+P.</p>
+      <p class="muted">Tip: klik op “Bewaar als PDF” of gebruik Ctrl/Cmd+P.</p>
     </footer>
 
     <script>
-        const printBtn = document.getElementById('printBtn');
-        if (printBtn) {
-            printBtn.addEventListener('click', function handlePrintClick() {
-                window.print();
+      const printBtn = document.getElementById("printBtn");
+      if (printBtn) {
+        printBtn.addEventListener("click", function handlePrintClick() {
+          window.print();
+        });
+      }
+
+      function byId(id) {
+        return document.getElementById(id);
+      }
+      function el(tag, attrs = {}, children = []) {
+        const n = document.createElement(tag);
+        for (const [k, v] of Object.entries(attrs)) {
+          if (k === "class") n.className = v;
+          else if (k === "text") n.textContent = v;
+          else n.setAttribute(k, v);
+        }
+        for (const c of children) n.appendChild(c);
+        return n;
+      }
+
+      function renderList(targetId, items) {
+        const ul = byId(targetId);
+        ul.innerHTML = "";
+        for (const item of items) {
+          if (typeof item !== "string" && item.url !== undefined)
+            ul.appendChild(
+              el("li", {}, [
+                el("a", {
+                  href: item.url,
+                  target: "_blank",
+                  rel: "noopener",
+                  text: item.label,
+                }),
+              ])
+            );
+          else if (typeof item !== "string")
+            ul.appendChild(el("li", { text: item.label }));
+          else ul.appendChild(el("li", { text: item }));
+        }
+      }
+
+      function renderExperience(targetId, companies) {
+        const root = byId(targetId);
+        root.innerHTML = "";
+        for (const company of companies) {
+          const header = el("div", { class: "company-header" }, [
+            el("h3", { text: company.company }),
+            el("span", { class: "period", text: company.period || "" }),
+          ]);
+          const rolesUl = el("ul", { class: "roles" });
+          for (const role of company.roles || []) {
+            const li = el("li", { class: "role" });
+            const title = el("span", { class: "role-title", text: role.title });
+            const period = el("span", {
+              class: "period",
+              text: role.period || "",
             });
+            const bulletsUl = el("ul");
+            for (const b of role.bullets || [])
+              bulletsUl.appendChild(el("li", { text: b }));
+            li.appendChild(title);
+            li.appendChild(period);
+            li.appendChild(bulletsUl);
+            rolesUl.appendChild(li);
+          }
+          const article = el("article", { class: "company" }, [
+            header,
+            rolesUl,
+          ]);
+          root.appendChild(article);
         }
+      }
 
-        function byId(id) { return document.getElementById(id); }
-        function el(tag, attrs = {}, children = []) {
-            const n = document.createElement(tag);
-            for (const [k,v] of Object.entries(attrs)) {
-                if (k === 'class') n.className = v; else if (k === 'text') n.textContent = v; else n.setAttribute(k, v);
-            }
-            for (const c of children) n.appendChild(c);
-            return n;
+      function renderEducation(targetId, items) {
+        const root = byId(targetId);
+        root.innerHTML = "";
+        for (const ed of items) {
+          const header = el("div", { class: "entry-header" }, [
+            el("h3", { text: ed.title }),
+            el("span", { class: "period", text: ed.period || "" }),
+          ]);
+          const ul = el("ul");
+          for (const b of ed.bullets || [])
+            ul.appendChild(el("li", { text: b }));
+          root.appendChild(el("article", { class: "entry" }, [header, ul]));
         }
+      }
 
-        function renderList(targetId, items) {
-            const ul = byId(targetId);
-            ul.innerHTML = '';
-            for (const item of items) {
-                if (typeof item !== "string" && item.url !== undefined ) ul.appendChild(el('li', {}, [ el('a', { href: item.url, target: '_blank', rel: 'noopener', text: item.label }) ]));
-                else if (typeof item !== "string") ul.appendChild(el('li', { text: item.label }));
-                else ul.appendChild(el('li', { text: item }));
-            }
-        }
+      async function loadData() {
+        const res = await fetch("cv.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to load cv.json");
+        return await res.json();
+      }
 
-        function renderExperience(targetId, companies) {
-            const root = byId(targetId);
-            root.innerHTML = '';
-            for (const company of companies) {
-                const header = el('div', { class: 'company-header' }, [
-                    el('h3', { text: company.company }),
-                    el('span', { class: 'period', text: company.period || '' })
-                ]);
-                const rolesUl = el('ul', { class: 'roles' });
-                for (const role of company.roles || []) {
-                    const li = el('li', { class: 'role' });
-                    const title = el('span', { class: 'role-title', text: role.title });
-                    const period = el('span', { class: 'period', text: role.period || '' });
-                    const bulletsUl = el('ul');
-                    for (const b of role.bullets || []) bulletsUl.appendChild(el('li', { text: b }));
-                    li.appendChild(title); li.appendChild(period); li.appendChild(bulletsUl);
-                    rolesUl.appendChild(li);
-                }
-                const article = el('article', { class: 'company' }, [header, rolesUl]);
-                root.appendChild(article);
-            }
-        }
-
-        function renderEducation(targetId, items) {
-            const root = byId(targetId); root.innerHTML='';
-            for (const ed of items) {
-                const header = el('div', { class: 'entry-header' }, [
-                    el('h3', { text: ed.title }),
-                    el('span', { class: 'period', text: ed.period || '' })
-                ]);
-                const ul = el('ul');
-                for (const b of ed.bullets || []) ul.appendChild(el('li', { text: b }));
-                root.appendChild(el('article', { class: 'entry' }, [header, ul]));
-            }
-        }
-
-        async function loadData() {
-            const res = await fetch('cv.json', { cache: 'no-store' });
-            if (!res.ok) throw new Error('Failed to load cv.json');
-            return await res.json();
-        }
-
-        loadData()
-            .then(data => {
-                byId('name').textContent = data.profile.name;
-                byId('location').textContent = data.profile.location;
-                byId('intro').textContent = data.profile.intro;
-                const photo = byId('photo'); if (data.profile.photo) photo.src = data.profile.photo;
-                const contactItems = [ { label: data.profile.email, url: 'mailto:' + data.profile.email }, ...(data.profile.links||[]) ];
-                renderList('contact', contactItems);
-                renderList('skills', data.skills||[]);
-                renderList('languages', data.languages||[]);
-                renderList('certifications', data.certifications||[]);
-                renderExperience('experience', data.experience||[]);
-                renderEducation('education', data.education||[]);
-                renderExperience('volunteers', data.volunteers||[]);
-            })
-            .catch(err => {
-                const content = document.querySelector('.content');
-                const note = document.createElement('div');
-                note.className = 'entry';
-                note.innerHTML = '<p class="muted">Er is een fout opgetreden bij het laden van de gegevens. Bekijk mijn CV op <a href="https://www.linkedin.com/in/ischon/" target="_blank" rel="noopener">linkedin.com/in/ischon</a>.</p>';
-                content.prepend(note);
-                console.error(err);
-            });
+      loadData()
+        .then((data) => {
+          byId("name").textContent = data.profile.name;
+          byId("location").textContent = data.profile.location;
+          byId("intro").textContent = data.profile.intro;
+          const photo = byId("photo");
+          if (data.profile.photo) photo.src = data.profile.photo;
+          const contactItems = [
+            { label: data.profile.email, url: "mailto:" + data.profile.email },
+            ...(data.profile.links || []),
+          ];
+          renderList("contact", contactItems);
+          renderList("skills", data.skills || []);
+          renderList("languages", data.languages || []);
+          renderList("certifications", data.certifications || []);
+          renderExperience("experience", data.experience || []);
+          renderEducation("education", data.education || []);
+          renderExperience("volunteers", data.volunteers || []);
+        })
+        .catch((err) => {
+          const content = document.querySelector(".content");
+          const note = document.createElement("div");
+          note.className = "entry";
+          note.innerHTML =
+            '<p class="muted">Er is een fout opgetreden bij het laden van de gegevens. Bekijk mijn CV op <a href="https://www.linkedin.com/in/ischon/" target="_blank" rel="noopener">linkedin.com/in/ischon</a>.</p>';
+          content.prepend(note);
+          console.error(err);
+        });
     </script>
-</body>
+  </body>
 </html>
