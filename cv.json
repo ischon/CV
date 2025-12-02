@@ -32,14 +32,27 @@
   ],
   "experience": [
     {
-      "company": "Florbs",
-      "period": "november 2022 – heden",
+      "company": "Notive",
+      "period": "december 2025 – heden",
       "roles": [
         {
-          "title": "DevOps Engineer",
-          "period": "april 2023 – heden",
+          "title": "Developer",
+          "period": "december 2025 - heden",
           "bullets": [
-            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python, SonarCloud, ISO 27001:2002"
+            "Skills: Development"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Florbs",
+      "period": "november 2022 – november 2025",
+      "roles": [
+        {
+          "title": "DevOps Engineer & Security Officer",
+          "period": "april 2023 – november 2025",
+          "bullets": [
+            "Skills: Terraform, GitHub CI/CD, Google Cloud Platform (GCP), Python, SonarCloud, ISO 27001:2022"
           ]
         },
         {
